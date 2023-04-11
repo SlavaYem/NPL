@@ -61,4 +61,33 @@ last_h = row_9.rfind('h')
 new_row = row_9[:first_h + 1] + row_9[first_h + 1:last_h].replace("h", "H") + row_9[last_h:]
 print(new_row)
 # //...10...//
+row_10 = "2691"
+new_row = ''.join([row_10[i] for i in range(len(row_10)) if i % 3 != 0])
+print(new_row)
 # //...11...//
+# відкриваємо англійський словник
+with open('english_ukrainian_dict.txt', 'r') as file:
+    lines = file.readlines()
+
+# створюємо словник
+dictionary = {}
+
+# проходимо по рядках англійського словника
+for line in lines:
+    words = line.strip().split(' - ')
+    eng_word = words[0]
+    ukr_words = words[1].split(', ')
+
+    # додаємо українські слова до словника
+    for ukr_word in ukr_words:
+        if ukr_word not in dictionary:
+            dictionary[ukr_word] = [eng_word]
+        else:
+            dictionary[ukr_word].append(eng_word)
+
+# відкриваємо український словник
+with open('ukrainian_dictionary.txt', 'w') as file:
+    # проходимо по словах словника в алфавітному порядку
+    for ukr_word in sorted(dictionary.keys()):
+        # записуємо слово та його значення
+        file.write(f"{ukr_word} - {', '.join(dictionary[ukr_word])}\n")
