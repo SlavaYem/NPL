@@ -1,0 +1,7 @@
+автомобіль - car
+книга - book
+машина - car
+слон - elephant
+собака - dog
+яблуко - apple
+яблуня - apple
