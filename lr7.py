@@ -14,7 +14,7 @@ reverse_words = words_row[::-1]
 result = ''.join(reverse_words)
 print(result)
 # //...3...//
-row_3 = "avg full f"
+row_3 = "avg full f "
 first_index = row_3.find('f')
 last_index = row_3.rfind('f')
 if first_index == last_index and first_index != -1:
@@ -33,7 +33,7 @@ else:
     else:
         print(second_index)
 # //...5...//
-row_5 = "ffdsfsfhffh"
+row_5 = "ffds h fdfdfdfdf h vgvgv "
 first_h_index = row_5.find("h")
 last_h_index = row_5.rfind("h")
 new_row = row_5[:first_h_index] + row_5[last_h_index + 1:]
