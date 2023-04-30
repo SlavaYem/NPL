@@ -90,4 +90,37 @@ with_spaces = my_string + " " + my_string
 print(with_spaces)
 with_spaces = (my_string + " ") * 3
 print(with_spaces)
-# //...6...//
+# //...7...//
+my_sent = ["Слава", "Україні"]
+my_string = ' '.join(my_sent)
+print(my_string)
+back_to_list = my_string.split()
+print(back_to_list)
+# //...8...//
+phrase1 = ["Слава"]
+phrase2 = ["Україні"]
+phrase3 = ["Героям"]
+phrase4 = ["Слава"]
+sentence1 = phrase1 + phrase2
+sentence2 = phrase3 + phrase4
+sentence3 = phrase1 + phrase2 + phrase3 + phrase4
+print(sentence1)
+print(len(sentence1))
+print(sentence2)
+print(len(sentence2))
+print(sentence3)
+print(len(sentence3))
+print(len(phrase1 + phrase2))
+print(len(phrase1) + len(phrase2))
+# //...9...//
+print("Monty Python"[6:12])
+print(["Monty", "Python"][1])
+# //...10...//
+print(sent1[2][2])
+# //...11...//
+sent3 = ['In', 'the', 'beginning', 'God', 'created', 'the', 'heaven', 'and', 'the', 'earth', '.']
+indexes = []
+for i, word in enumerate(sent3):
+    if word == 'the':
+        indexes.append(i)
+print(indexes)
