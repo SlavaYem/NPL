@@ -40,13 +40,14 @@ import numpy as np
 # print(len(sent))
 # print(sent[1:9])
 # //...1...//
+print("###################### Task 1 ######################")
 num_words = len(text2)
 print("Number of words in text2:", num_words)
 num_distinct_words = len(set(text2))
 print("Number of distinct words in text2:", num_distinct_words)
 
-
 # //...2...//
+print("###################### Task 2 ######################")
 
 
 def lexical_diversity(text):
@@ -59,27 +60,17 @@ romance_ld = lexical_diversity(text2)
 print("Lexical diversity score for humor fiction:", humor_ld)
 print("Lexical diversity score for romance fiction:", romance_ld)
 # //...3...//
-# sense = gutenberg.words('austen-sense.txt')
-# elinor = ["Elinor"]
-# marianne = ["Marianne"]
-# edward = ["Edward"]
-# willoughby = ["Willoughby"]
-# for i in range(len(sense)):
-#     if sense[i] == "Elinor":
-#         elinor.append(i)
-#     elif sense[i] == "Marianne":
-#         marianne.append(i)
-#     elif sense[i] == "Edward":
-#         edward.append(i)
-#     elif sense[i] == "Willoughby":
-#         willoughby.append(i)
-# dispersion_plot(sense, elinor, marianne, edward, willoughby)
+print("###################### Task 3 ######################")
+text2.dispersion_plot(["Elinor", "Marianne", "Edward", "Willoughby"])
 # //...4...//
+print("###################### Task 4 ######################")
 print(text5.collocations())
 # //...5...//
+print("###################### Task 5 ######################")
 set(text4)
 print(len(set(text4)))
 # //...6...//
+print("###################### Task 6 ######################")
 my_string = "The quick brown fox jumps over the lazy dog"
 print(my_string)
 concatenated = my_string + my_string
@@ -91,12 +82,14 @@ print(with_spaces)
 with_spaces = (my_string + " ") * 3
 print(with_spaces)
 # //...7...//
+print("###################### Task 7 ######################")
 my_sent = ["Слава", "Україні"]
 my_string = ' '.join(my_sent)
 print(my_string)
 back_to_list = my_string.split()
 print(back_to_list)
 # //...8...//
+print("###################### Task 8 ######################")
 phrase1 = ["Слава"]
 phrase2 = ["Україні"]
 phrase3 = ["Героям"]
@@ -113,11 +106,14 @@ print(len(sentence3))
 print(len(phrase1 + phrase2))
 print(len(phrase1) + len(phrase2))
 # //...9...//
+print("###################### Task 9 ######################")
 print("Monty Python"[6:12])
 print(["Monty", "Python"][1])
 # //...10...//
+print("###################### Task 10 ######################")
 print(sent1[2][2])
 # //...11...//
+print("###################### Task 11 ######################")
 sent3 = ['In', 'the', 'beginning', 'God', 'created', 'the', 'heaven', 'and', 'the', 'earth', '.']
 indexes = []
 for i, word in enumerate(sent3):
