@@ -55,9 +55,34 @@ print("###################### Task 5 ######################")
 result6 = monty[::-1]
 print(result6)
 print("###################### Task 6 ######################")
+patterns = [
+    r'[a-zA-Z]+',
+    r'[A-Z][a-z]*',
+    r'p[aeiou]{,2}t',
+    r'\d+(\.\d+)?',
+    r'([^aeiou][aeiou][^aeiou])*',
+    r'\w+|[^\w\s]+'
+]
 
+textes = [
+    "Red dog --3.",
+    "Red dog Red",
+    "patrik patt ",
+    "Value = 12.3 99",
+    "bab ab ab nen",
+    "-. Red ^44 ?"
+]
+
+for pattern, text in zip(patterns, textes):
+    nltk.re_show(pattern, text)
 print("###################### Task 7 ######################")
-
+text = "The a an goood. 2*3+8"
+patterns = [
+    r'\b(a|an|the|A|An|The)\b',
+    r'\d+([*+]\d+)*'
+]
+for pattens in patterns:
+    nltk.re_show(pattens, text)
 print("###################### Task 8 ######################")
 
 
@@ -121,14 +146,11 @@ for pattern in patterns:
 
 print(tokens)
 print("###################### Task 10 ######################")
-text = load('corpus.txt')
-tokens = nltk.word_tokenize(text)
-wh_words = []
-for token in tokens:
-    if token.lower().startswith('wh'):
-        wh_words.append(token)
-wh_words = list(set(wh_words))
-print(wh_words)
+url = "https://en.wikipedia.org/wiki/Interrogative_word"
+text = remove_html_markup(url)
+pattern = r'\bwh\w+\b'
+wh = set(nltk.regexp_tokenize(text, pattern))
+print(wh)
 print("###################### Task 11 ######################")
 filename = 'word_frequencies.txt'
 lines = open(filename).readlines()
@@ -235,6 +257,7 @@ for word in text:
 print("Vowel Bigram Table:")
 for bigram, count in vowel_bigrams.items():
     print(f"{bigram[0]}-{bigram[1]}: {count}")
+    
 print("###################### Task 17 ######################")
 letters = ''.join(random.choice("aehh ") for _ in range(500))
 normalized = ' '.join(letters.split())
