@@ -68,7 +68,7 @@ print(noun)
 adjective = 'French'
 noun = convert_nationality_to_noun(adjective)
 print(noun)
-print("###################### Task 4 ######################")
+# print("###################### Task 4 ######################")
 # corpus = nltk.corpus.brown
 # tokenized_text = nltk.word_tokenize(corpus.raw())
 # pattern = r"as best (?:as )?[A-Za-z]+ can"
